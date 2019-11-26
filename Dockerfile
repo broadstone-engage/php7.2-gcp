@@ -19,4 +19,6 @@ RUN aptitude update && aptitude install -y google-cloud-sdk
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- s--install-dir=/usr/local/bin --filename=composer
 
-# RUN composer install
+# XDebug
+RUN pecl install xdebug
+RUN docker-php-ext-enable xdebug
